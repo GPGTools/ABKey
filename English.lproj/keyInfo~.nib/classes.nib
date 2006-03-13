@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {infoSheetClose = id; nextKey = id; previousKey = id; refresh = id; }; 
+            CLASS = ABDetailedKeyInfoController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                infoSheet = NSWindow; 
+                keyController = NSArrayController; 
+                personName = NSTextField; 
+                refreshButton = NSButton; 
+                refreshIndicator = NSProgressIndicator; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = ABSignaturesViewController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                keyController = NSArrayController; 
+                outlineView = NSOutlineView; 
+                selectionController = NSObjectController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GPGKey; LANGUAGE = ObjC; SUPERCLASS = GPGObject; }, 
+        {CLASS = GPGObject; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

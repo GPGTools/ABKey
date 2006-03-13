@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B00C90A07BD8FF6003A1578 /* ABKeyPreferenceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B00C90807BD8FF6003A1578 /* ABKeyPreferenceModule.h */; };
+		4B00C90B07BD8FF6003A1578 /* ABKeyPreferenceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00C90907BD8FF6003A1578 /* ABKeyPreferenceModule.m */; };
+		4B00C97707BD9840003A1578 /* NSPreferencesModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B00C97607BD9840003A1578 /* NSPreferencesModuleProtocol.h */; };
+		4B00C9EE07BD9C4C003A1578 /* ABKeyPreferences.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4B00C92907BD9315003A1578 /* ABKeyPreferences.tiff */; };
+		4B105273061269E4003063C2 /* arrow-right.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4B105272061269E4003063C2 /* arrow-right.tiff */; };
+		4B10527A06126ABD003063C2 /* arrow-down.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4B10527806126ABC003063C2 /* arrow-down.tiff */; };
+		4B10527B06126ABD003063C2 /* arrow-left.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4B10527906126ABD003063C2 /* arrow-left.tiff */; };
+		4B24EF9107C03CA9004D7AD6 /* NSPreferencesPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B24EF8F07C03CA9004D7AD6 /* NSPreferencesPatches.h */; };
+		4B24EF9207C03CA9004D7AD6 /* NSPreferencesPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B24EF9007C03CA9004D7AD6 /* NSPreferencesPatches.m */; };
+		4B2C639807D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2C639607D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.h */; };
+		4B2C639907D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C639707D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.m */; };
+		4B78008707E2921D00E371F9 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B78008607E2921D00E371F9 /* search.png */; };
+		4B78FF0807E26FA600E371F9 /* ABKeyWindowAugmentationsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B78FF0607E26FA600E371F9 /* ABKeyWindowAugmentationsManager.h */; };
+		4B78FF0907E26FA600E371F9 /* ABKeyWindowAugmentationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B78FF0707E26FA600E371F9 /* ABKeyWindowAugmentationsManager.m */; };
+		4B78FF4607E276E800E371F9 /* NSWindow extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B78FF4407E276E800E371F9 /* NSWindow extensions.h */; };
+		4B78FF4707E276E800E371F9 /* NSWindow extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B78FF4507E276E800E371F9 /* NSWindow extensions.m */; };
+		4B78FF6807E27B8300E371F9 /* ABCardWindowControllerPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B78FF6607E27B8300E371F9 /* ABCardWindowControllerPatches.h */; };
+		4B78FF6907E27B8300E371F9 /* ABCardWindowControllerPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B78FF6707E27B8300E371F9 /* ABCardWindowControllerPatches.m */; };
+		4B87772C0618ECE90030343E /* ABKey.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B8777050618ECD30030343E /* ABKey.bundle */; };
+		4B9934E907DFF49400895421 /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEF69207B6B5B900E2D957 /* license.txt */; };
+		4BA81E0207B9B39100A352E8 /* ABKeyStatusColourTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA81E0007B9B39100A352E8 /* ABKeyStatusColourTransformer.h */; };
+		4BA81E0307B9B39100A352E8 /* ABKeyStatusColourTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA81E0107B9B39100A352E8 /* ABKeyStatusColourTransformer.m */; };
+		4BAC4FD607E90DBF006B0026 /* search-cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC4FD007E90D9F006B0026 /* search-cancel.png */; };
+		4BAC503A07ED17D9006B0026 /* ABKeyEmailSearchResultsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BAC503807ED17D9006B0026 /* ABKeyEmailSearchResultsController.h */; };
+		4BAC503B07ED17D9006B0026 /* ABKeyEmailSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC503907ED17D9006B0026 /* ABKeyEmailSearchResultsController.m */; };
+		4BAC505907ED192E006B0026 /* ABKeyPreferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC505807ED192E006B0026 /* ABKeyPreferences.nib */; };
+		4BAC506307ED1942006B0026 /* EmailSearchResults.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC506207ED1942006B0026 /* EmailSearchResults.nib */; };
+		4BCA1FBB081C28D9009E0B9E /* NSDate extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCA1FB9081C28D9009E0B9E /* NSDate extensions.h */; };
+		4BCA1FBC081C28D9009E0B9E /* NSDate extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA1FBA081C28D9009E0B9E /* NSDate extensions.m */; };
+		4BCA211A081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCA2118081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.h */; };
+		4BCA211B081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA2119081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.m */; };
+		4BCA2190081C6BF5009E0B9E /* padlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCA218D081C6BF5009E0B9E /* padlock.png */; };
+		4BCA2191081C6BF5009E0B9E /* padlockAndPencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCA218E081C6BF5009E0B9E /* padlockAndPencil.png */; };
+		4BCA2192081C6BF5009E0B9E /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCA218F081C6BF5009E0B9E /* pencil.png */; };
+		4BCA2507081F28C6009E0B9E /* ABUIControllerPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCA2505081F28C6009E0B9E /* ABUIControllerPatches.h */; };
+		4BCA2508081F28C6009E0B9E /* ABUIControllerPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCA2506081F28C6009E0B9E /* ABUIControllerPatches.m */; };
+		4BD9422607FF410E006B996C /* GPGME.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BD9419907FCE37D006B996C /* GPGME.framework */; };
+		4BD942A407FF5139006B996C /* ABMainWindowControllerPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD942A207FF5139006B996C /* ABMainWindowControllerPatches.h */; };
+		4BD942A507FF5139006B996C /* ABMainWindowControllerPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD942A307FF5139006B996C /* ABMainWindowControllerPatches.m */; };
+		4BE61A1107EE527B0093B147 /* ABKeyEmailSearchSelectButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE61A0F07EE527B0093B147 /* ABKeyEmailSearchSelectButtonCell.m */; };
+		4BEACF5607A8863E009BB28A /* ABDetailedKeyInfoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEACF5407A8863E009BB28A /* ABDetailedKeyInfoController.h */; };
+		4BEACF5707A8863E009BB28A /* ABDetailedKeyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEACF5507A8863E009BB28A /* ABDetailedKeyInfoController.m */; };
+		4BEAD22E07AB15A1009BB28A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B034A5A060CF1E1004918D6 /* AddressBook.framework */; };
+		4BEBD85F07C4262E00E0938F /* ABKey.defaults in Resources */ = {isa = PBXBuildFile; fileRef = 4BEBD85E07C4262E00E0938F /* ABKey.defaults */; };
+		4BEBD8F007C4425C00E0938F /* ABKeyAttachmentCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEBD8EE07C4425C00E0938F /* ABKeyAttachmentCell.h */; };
+		4BEBD8F107C4425C00E0938F /* ABKeyAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEBD8EF07C4425C00E0938F /* ABKeyAttachmentCell.m */; };
+		4BEEEEFE07B598F400E2D957 /* GPGMEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEEEFC07B598F400E2D957 /* GPGMEController.h */; };
+		4BEEEEFF07B598F400E2D957 /* GPGMEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEEEFD07B598F400E2D957 /* GPGMEController.m */; };
+		4BEEEF6A07B5A0F500E2D957 /* GPGKey extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEEF6807B5A0F500E2D957 /* GPGKey extensions.h */; };
+		4BEEEF6B07B5A0F500E2D957 /* GPGKey extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEEF6907B5A0F500E2D957 /* GPGKey extensions.m */; };
+		4BEEF0F907B5B82E00E2D957 /* GPGSubkey extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEF0F707B5B82E00E2D957 /* GPGSubkey extensions.h */; };
+		4BEEF0FA07B5B82E00E2D957 /* GPGSubkey extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEF0F807B5B82E00E2D957 /* GPGSubkey extensions.m */; };
+		4BEEF15B07B5BE6200E2D957 /* GPGUserID extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEF15907B5BE6200E2D957 /* GPGUserID extensions.h */; };
+		4BEEF15C07B5BE6200E2D957 /* GPGUserID extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEF15A07B5BE6200E2D957 /* GPGUserID extensions.m */; };
+		4BEEF18B07B5C2DD00E2D957 /* ABSignaturesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEF18907B5C2DD00E2D957 /* ABSignaturesViewController.h */; };
+		4BEEF18C07B5C2DD00E2D957 /* ABSignaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEF18A07B5C2DD00E2D957 /* ABSignaturesViewController.m */; };
+		4BEEF29107B5DF5E00E2D957 /* GPGKeySignature extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEF28F07B5DF5E00E2D957 /* GPGKeySignature extensions.h */; };
+		4BEEF29207B5DF5E00E2D957 /* GPGKeySignature extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BEEF29007B5DF5E00E2D957 /* GPGKeySignature extensions.m */; };
+		4BEEF32207B66E0E00E2D957 /* PatchingFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8C07AF0626057B0099BB4B /* PatchingFunctions.h */; };
+		4BEEF32307B66E0F00E2D957 /* PatchingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8C07B00626057B0099BB4B /* PatchingFunctions.m */; };
+		4BEEF32407B66E1100E2D957 /* ABInputControllerPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B167035079F3B7C00989474 /* ABInputControllerPatches.h */; };
+		4BEEF32507B66E1200E2D957 /* ABInputControllerPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B167036079F3B7C00989474 /* ABInputControllerPatches.m */; };
+		4BEEF32607B66E1300E2D957 /* ABTextViewPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B167013079F3A3C00989474 /* ABTextViewPatches.h */; };
+		4BEEF32707B66E1400E2D957 /* ABTextViewPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B167014079F3A3C00989474 /* ABTextViewPatches.m */; };
+		4BEEF32807B66E1500E2D957 /* ABTemplatePrefsPatches.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8CFB9D07A20503004A2992 /* ABTemplatePrefsPatches.h */; };
+		4BEEF32907B66E1600E2D957 /* ABTemplatePrefsPatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CFB9E07A20503004A2992 /* ABTemplatePrefsPatches.m */; };
+		4BEEF35B07B6708D00E2D957 /* change log.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEACEED07A87A96009BB28A /* change log.rtf */; };
+		4BEEF46707B6971F00E2D957 /* keyInfo.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEF46607B6971F00E2D957 /* keyInfo.nib */; };
+		4BEEF52807B6A63600E2D957 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEF52607B6A61900E2D957 /* Localizable.strings */; };
+		4BEEF63207B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BEEF63107B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h */; };
+		4BF7CAA808061FFF00DBC74F /* readme.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEF69107B6B5B900E2D957 /* readme.rtfd */; };
+		8D1AC9630486D14A00FE50C9 /* ABKeyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57AFE90428111CA0C5A /* ABKeyManager.h */; };
+		8D1AC96B0486D14A00FE50C9 /* ABKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* ABKeyManager.m */; settings = {ATTRIBUTES = (); }; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2E58F360FFB2326E11CA0CBA /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		2E58F361FFB2326E11CA0CBA /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				LIBRARY_STYLE = BUNDLE;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B034B68060CFF37004918D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Library/Address Book Plug-Ins/";
+			dstSubfolderSpec = 0;
+			files = (
+				4B87772C0618ECE90030343E /* ABKey.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1F01890622F64E00799E84 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BD9422607FF410E006B996C /* GPGME.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0259C576FE90428111CA0C5A /* ABKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ABKeyManager.m; sourceTree = "<group>"; };
+		0259C57AFE90428111CA0C5A /* ABKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ABKeyManager.h; sourceTree = "<group>"; };
+		4B00C90807BD8FF6003A1578 /* ABKeyPreferenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyPreferenceModule.h; sourceTree = "<group>"; };
+		4B00C90907BD8FF6003A1578 /* ABKeyPreferenceModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyPreferenceModule.m; sourceTree = "<group>"; };
+		4B00C92907BD9315003A1578 /* ABKeyPreferences.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ABKeyPreferences.tiff; sourceTree = "<group>"; };
+		4B00C95407BD9613003A1578 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/ABKeyPreferences.nib; sourceTree = "<group>"; };
+		4B00C97607BD9840003A1578 /* NSPreferencesModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPreferencesModuleProtocol.h; sourceTree = "<group>"; };
+		4B034A5A060CF1E1004918D6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		4B105272061269E4003063C2 /* arrow-right.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "arrow-right.tiff"; sourceTree = "<group>"; };
+		4B10527806126ABC003063C2 /* arrow-down.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "arrow-down.tiff"; sourceTree = "<group>"; };
+		4B10527906126ABD003063C2 /* arrow-left.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "arrow-left.tiff"; sourceTree = "<group>"; };
+		4B167013079F3A3C00989474 /* ABTextViewPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTextViewPatches.h; sourceTree = "<group>"; };
+		4B167014079F3A3C00989474 /* ABTextViewPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTextViewPatches.m; sourceTree = "<group>"; };
+		4B167035079F3B7C00989474 /* ABInputControllerPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABInputControllerPatches.h; sourceTree = "<group>"; };
+		4B167036079F3B7C00989474 /* ABInputControllerPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABInputControllerPatches.m; sourceTree = "<group>"; };
+		4B24EF8F07C03CA9004D7AD6 /* NSPreferencesPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPreferencesPatches.h; sourceTree = "<group>"; };
+		4B24EF9007C03CA9004D7AD6 /* NSPreferencesPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPreferencesPatches.m; sourceTree = "<group>"; };
+		4B2C639607D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyGlobalAnimationTimer.h; sourceTree = "<group>"; };
+		4B2C639707D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyGlobalAnimationTimer.m; sourceTree = "<group>"; };
+		4B78008607E2921D00E371F9 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		4B78FEC307E26AA500E371F9 /* class listings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "class listings"; sourceTree = "<group>"; };
+		4B78FF0607E26FA600E371F9 /* ABKeyWindowAugmentationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyWindowAugmentationsManager.h; sourceTree = "<group>"; };
+		4B78FF0707E26FA600E371F9 /* ABKeyWindowAugmentationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyWindowAugmentationsManager.m; sourceTree = "<group>"; };
+		4B78FF4407E276E800E371F9 /* NSWindow extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow extensions.h"; sourceTree = "<group>"; };
+		4B78FF4507E276E800E371F9 /* NSWindow extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow extensions.m"; sourceTree = "<group>"; };
+		4B78FF6607E27B8300E371F9 /* ABCardWindowControllerPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCardWindowControllerPatches.h; sourceTree = "<group>"; };
+		4B78FF6707E27B8300E371F9 /* ABCardWindowControllerPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCardWindowControllerPatches.m; sourceTree = "<group>"; };
+		4B8777050618ECD30030343E /* ABKey.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABKey.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8C07AF0626057B0099BB4B /* PatchingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchingFunctions.h; sourceTree = "<group>"; };
+		4B8C07B00626057B0099BB4B /* PatchingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchingFunctions.m; sourceTree = "<group>"; };
+		4B8CFB9D07A20503004A2992 /* ABTemplatePrefsPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTemplatePrefsPatches.h; sourceTree = "<group>"; };
+		4B8CFB9E07A20503004A2992 /* ABTemplatePrefsPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTemplatePrefsPatches.m; sourceTree = "<group>"; };
+		4BA81E0007B9B39100A352E8 /* ABKeyStatusColourTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyStatusColourTransformer.h; sourceTree = "<group>"; };
+		4BA81E0107B9B39100A352E8 /* ABKeyStatusColourTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyStatusColourTransformer.m; sourceTree = "<group>"; };
+		4BAC4FD007E90D9F006B0026 /* search-cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-cancel.png"; sourceTree = "<group>"; };
+		4BAC503807ED17D9006B0026 /* ABKeyEmailSearchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyEmailSearchResultsController.h; sourceTree = "<group>"; };
+		4BAC503907ED17D9006B0026 /* ABKeyEmailSearchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyEmailSearchResultsController.m; sourceTree = "<group>"; };
+		4BAC504B07ED187D006B0026 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/EmailSearchResults.nib; sourceTree = "<group>"; };
+		4BCA1FB9081C28D9009E0B9E /* NSDate extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate extensions.h"; sourceTree = "<group>"; };
+		4BCA1FBA081C28D9009E0B9E /* NSDate extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate extensions.m"; sourceTree = "<group>"; };
+		4BCA2118081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyAlgorithmTypeImageTransformer.h; sourceTree = "<group>"; };
+		4BCA2119081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyAlgorithmTypeImageTransformer.m; sourceTree = "<group>"; };
+		4BCA218D081C6BF5009E0B9E /* padlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = padlock.png; sourceTree = "<group>"; };
+		4BCA218E081C6BF5009E0B9E /* padlockAndPencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = padlockAndPencil.png; sourceTree = "<group>"; };
+		4BCA218F081C6BF5009E0B9E /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		4BCA2505081F28C6009E0B9E /* ABUIControllerPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABUIControllerPatches.h; sourceTree = "<group>"; };
+		4BCA2506081F28C6009E0B9E /* ABUIControllerPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABUIControllerPatches.m; sourceTree = "<group>"; };
+		4BD9419907FCE37D006B996C /* GPGME.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPGME.framework; path = /Users/rsg/Developer/GPGME/build/GPGME.framework; sourceTree = "<absolute>"; };
+		4BD942A207FF5139006B996C /* ABMainWindowControllerPatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMainWindowControllerPatches.h; sourceTree = "<group>"; };
+		4BD942A307FF5139006B996C /* ABMainWindowControllerPatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMainWindowControllerPatches.m; sourceTree = "<group>"; };
+		4BE61A0F07EE527B0093B147 /* ABKeyEmailSearchSelectButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyEmailSearchSelectButtonCell.m; sourceTree = "<group>"; };
+		4BEACEED07A87A96009BB28A /* change log.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "change log.rtf"; sourceTree = "<group>"; };
+		4BEACF0807A87CDE009BB28A /* todo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = todo.rtf; sourceTree = "<group>"; };
+		4BEACF5407A8863E009BB28A /* ABDetailedKeyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDetailedKeyInfoController.h; sourceTree = "<group>"; };
+		4BEACF5507A8863E009BB28A /* ABDetailedKeyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDetailedKeyInfoController.m; sourceTree = "<group>"; };
+		4BEBD85E07C4262E00E0938F /* ABKey.defaults */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ABKey.defaults; sourceTree = "<group>"; };
+		4BEBD8EE07C4425C00E0938F /* ABKeyAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyAttachmentCell.h; sourceTree = "<group>"; };
+		4BEBD8EF07C4425C00E0938F /* ABKeyAttachmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyAttachmentCell.m; sourceTree = "<group>"; };
+		4BEEEED507B58E6400E2D957 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/keyInfo.nib; sourceTree = "<group>"; };
+		4BEEEEFC07B598F400E2D957 /* GPGMEController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGMEController.h; sourceTree = "<group>"; };
+		4BEEEEFD07B598F400E2D957 /* GPGMEController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGMEController.m; sourceTree = "<group>"; };
+		4BEEEF6807B5A0F500E2D957 /* GPGKey extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPGKey extensions.h"; sourceTree = "<group>"; };
+		4BEEEF6907B5A0F500E2D957 /* GPGKey extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPGKey extensions.m"; sourceTree = "<group>"; };
+		4BEEF0F707B5B82E00E2D957 /* GPGSubkey extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPGSubkey extensions.h"; sourceTree = "<group>"; };
+		4BEEF0F807B5B82E00E2D957 /* GPGSubkey extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPGSubkey extensions.m"; sourceTree = "<group>"; };
+		4BEEF15907B5BE6200E2D957 /* GPGUserID extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPGUserID extensions.h"; sourceTree = "<group>"; };
+		4BEEF15A07B5BE6200E2D957 /* GPGUserID extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPGUserID extensions.m"; sourceTree = "<group>"; };
+		4BEEF18907B5C2DD00E2D957 /* ABSignaturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSignaturesViewController.h; sourceTree = "<group>"; };
+		4BEEF18A07B5C2DD00E2D957 /* ABSignaturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSignaturesViewController.m; sourceTree = "<group>"; };
+		4BEEF28F07B5DF5E00E2D957 /* GPGKeySignature extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPGKeySignature extensions.h"; sourceTree = "<group>"; };
+		4BEEF29007B5DF5E00E2D957 /* GPGKeySignature extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPGKeySignature extensions.m"; sourceTree = "<group>"; };
+		4BEEF52207B6A60E00E2D957 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BEEF63107B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyManagerPluginBundleResourceAccess.h; sourceTree = "<group>"; };
+		4BEEF69107B6B5B900E2D957 /* readme.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = readme.rtfd; sourceTree = "<group>"; };
+		4BEEF69207B6B5B900E2D957 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				4BEAD22E07AB15A1009BB28A /* AddressBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* ABKeyManager */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Classes */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				4B1F03BB0622F86F00799E84 /* Other */,
+				4B78FEC307E26AA500E371F9 /* class listings */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+			);
+			name = ABKeyManager;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B00C92907BD9315003A1578 /* ABKeyPreferences.tiff */,
+				4BEEF52607B6A61900E2D957 /* Localizable.strings */,
+				4B105272061269E4003063C2 /* arrow-right.tiff */,
+				4B10527806126ABC003063C2 /* arrow-down.tiff */,
+				4BCA218D081C6BF5009E0B9E /* padlock.png */,
+				4BCA218E081C6BF5009E0B9E /* padlockAndPencil.png */,
+				4BCA218F081C6BF5009E0B9E /* pencil.png */,
+				4B10527906126ABD003063C2 /* arrow-left.tiff */,
+				4B78008607E2921D00E371F9 /* search.png */,
+				4BAC4FD007E90D9F006B0026 /* search-cancel.png */,
+				4BEBD85E07C4262E00E0938F /* ABKey.defaults */,
+				4BAC505807ED192E006B0026 /* ABKeyPreferences.nib */,
+				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
+				4BEEF46607B6971F00E2D957 /* keyInfo.nib */,
+				4BAC506207ED1942006B0026 /* EmailSearchResults.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B8777050618ECD30030343E /* ABKey.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BD9419907FCE37D006B996C /* GPGME.framework */,
+				4B034A5A060CF1E1004918D6 /* AddressBook.framework */,
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4BEEF30907B66B3500E2D957 /* Gui classes */,
+				4BE0B78D07C81172008D5485 /* TextCell classes */,
+				4BEEEF6507B5A0D600E2D957 /* class extensions */,
+				4BEEEF0207B5993900E2D957 /* patches */,
+				4BEEF63107B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h */,
+				0259C57AFE90428111CA0C5A /* ABKeyManager.h */,
+				0259C576FE90428111CA0C5A /* ABKeyManager.m */,
+				4BEEEEFC07B598F400E2D957 /* GPGMEController.h */,
+				4BEEEEFD07B598F400E2D957 /* GPGMEController.m */,
+				4B2C639607D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.h */,
+				4B2C639707D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.m */,
+				4B78FF0607E26FA600E371F9 /* ABKeyWindowAugmentationsManager.h */,
+				4B78FF0707E26FA600E371F9 /* ABKeyWindowAugmentationsManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4B00C90507BD8FD5003A1578 /* Preference Pane */ = {
+			isa = PBXGroup;
+			children = (
+				4B00C97607BD9840003A1578 /* NSPreferencesModuleProtocol.h */,
+				4B00C90807BD8FF6003A1578 /* ABKeyPreferenceModule.h */,
+				4B00C90907BD8FF6003A1578 /* ABKeyPreferenceModule.m */,
+			);
+			name = "Preference Pane";
+			sourceTree = "<group>";
+		};
+		4B1F03BB0622F86F00799E84 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4BEEF69107B6B5B900E2D957 /* readme.rtfd */,
+				4BEEF69207B6B5B900E2D957 /* license.txt */,
+				4BEACEED07A87A96009BB28A /* change log.rtf */,
+				4BEACF0807A87CDE009BB28A /* todo.rtf */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4BA81DC307B9B0F400A352E8 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA2118081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.h */,
+				4BCA2119081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.m */,
+				4BA81E0007B9B39100A352E8 /* ABKeyStatusColourTransformer.h */,
+				4BA81E0107B9B39100A352E8 /* ABKeyStatusColourTransformer.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		4BAC503207ED1789006B0026 /* Detailed Key Info */ = {
+			isa = PBXGroup;
+			children = (
+				4BEACF5407A8863E009BB28A /* ABDetailedKeyInfoController.h */,
+				4BEACF5507A8863E009BB28A /* ABDetailedKeyInfoController.m */,
+				4BEEF18907B5C2DD00E2D957 /* ABSignaturesViewController.h */,
+				4BEEF18A07B5C2DD00E2D957 /* ABSignaturesViewController.m */,
+			);
+			name = "Detailed Key Info";
+			sourceTree = "<group>";
+		};
+		4BAC503507ED179D006B0026 /* Email Key Search */ = {
+			isa = PBXGroup;
+			children = (
+				4BE61A0F07EE527B0093B147 /* ABKeyEmailSearchSelectButtonCell.m */,
+				4BAC503807ED17D9006B0026 /* ABKeyEmailSearchResultsController.h */,
+				4BAC503907ED17D9006B0026 /* ABKeyEmailSearchResultsController.m */,
+			);
+			name = "Email Key Search";
+			sourceTree = "<group>";
+		};
+		4BE0B78D07C81172008D5485 /* TextCell classes */ = {
+			isa = PBXGroup;
+			children = (
+				4BEBD8EE07C4425C00E0938F /* ABKeyAttachmentCell.h */,
+				4BEBD8EF07C4425C00E0938F /* ABKeyAttachmentCell.m */,
+			);
+			name = "TextCell classes";
+			sourceTree = "<group>";
+		};
+		4BEEEF0207B5993900E2D957 /* patches */ = {
+			isa = PBXGroup;
+			children = (
+				4B8C07AF0626057B0099BB4B /* PatchingFunctions.h */,
+				4B8C07B00626057B0099BB4B /* PatchingFunctions.m */,
+				4BCA2505081F28C6009E0B9E /* ABUIControllerPatches.h */,
+				4BCA2506081F28C6009E0B9E /* ABUIControllerPatches.m */,
+				4B167035079F3B7C00989474 /* ABInputControllerPatches.h */,
+				4B167036079F3B7C00989474 /* ABInputControllerPatches.m */,
+				4B167013079F3A3C00989474 /* ABTextViewPatches.h */,
+				4B167014079F3A3C00989474 /* ABTextViewPatches.m */,
+				4B8CFB9D07A20503004A2992 /* ABTemplatePrefsPatches.h */,
+				4B8CFB9E07A20503004A2992 /* ABTemplatePrefsPatches.m */,
+				4B24EF8F07C03CA9004D7AD6 /* NSPreferencesPatches.h */,
+				4B24EF9007C03CA9004D7AD6 /* NSPreferencesPatches.m */,
+				4BD942A207FF5139006B996C /* ABMainWindowControllerPatches.h */,
+				4BD942A307FF5139006B996C /* ABMainWindowControllerPatches.m */,
+				4B78FF6607E27B8300E371F9 /* ABCardWindowControllerPatches.h */,
+				4B78FF6707E27B8300E371F9 /* ABCardWindowControllerPatches.m */,
+			);
+			name = patches;
+			sourceTree = "<group>";
+		};
+		4BEEEF6507B5A0D600E2D957 /* class extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4BCA1FB9081C28D9009E0B9E /* NSDate extensions.h */,
+				4BCA1FBA081C28D9009E0B9E /* NSDate extensions.m */,
+				4B78FF4407E276E800E371F9 /* NSWindow extensions.h */,
+				4B78FF4507E276E800E371F9 /* NSWindow extensions.m */,
+				4BEEF28F07B5DF5E00E2D957 /* GPGKeySignature extensions.h */,
+				4BEEF29007B5DF5E00E2D957 /* GPGKeySignature extensions.m */,
+				4BEEF15907B5BE6200E2D957 /* GPGUserID extensions.h */,
+				4BEEF15A07B5BE6200E2D957 /* GPGUserID extensions.m */,
+				4BEEF0F707B5B82E00E2D957 /* GPGSubkey extensions.h */,
+				4BEEF0F807B5B82E00E2D957 /* GPGSubkey extensions.m */,
+				4BEEEF6807B5A0F500E2D957 /* GPGKey extensions.h */,
+				4BEEEF6907B5A0F500E2D957 /* GPGKey extensions.m */,
+			);
+			name = "class extensions";
+			sourceTree = "<group>";
+		};
+		4BEEF30907B66B3500E2D957 /* Gui classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B00C90507BD8FD5003A1578 /* Preference Pane */,
+				4BAC503507ED179D006B0026 /* Email Key Search */,
+				4BAC503207ED1789006B0026 /* Detailed Key Info */,
+				4BA81DC307B9B0F400A352E8 /* Transformers */,
+			);
+			name = "Gui classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1AC9610486D14A00FE50C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9630486D14A00FE50C9 /* ABKeyManager.h in Headers */,
+				4BEACF5607A8863E009BB28A /* ABDetailedKeyInfoController.h in Headers */,
+				4BEEEEFE07B598F400E2D957 /* GPGMEController.h in Headers */,
+				4BEEEF6A07B5A0F500E2D957 /* GPGKey extensions.h in Headers */,
+				4BEEF0F907B5B82E00E2D957 /* GPGSubkey extensions.h in Headers */,
+				4BEEF15B07B5BE6200E2D957 /* GPGUserID extensions.h in Headers */,
+				4BEEF18B07B5C2DD00E2D957 /* ABSignaturesViewController.h in Headers */,
+				4BEEF29107B5DF5E00E2D957 /* GPGKeySignature extensions.h in Headers */,
+				4BEEF32207B66E0E00E2D957 /* PatchingFunctions.h in Headers */,
+				4BEEF32407B66E1100E2D957 /* ABInputControllerPatches.h in Headers */,
+				4BEEF32607B66E1300E2D957 /* ABTextViewPatches.h in Headers */,
+				4BEEF32807B66E1500E2D957 /* ABTemplatePrefsPatches.h in Headers */,
+				4BEEF63207B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h in Headers */,
+				4BA81E0207B9B39100A352E8 /* ABKeyStatusColourTransformer.h in Headers */,
+				4B00C90A07BD8FF6003A1578 /* ABKeyPreferenceModule.h in Headers */,
+				4B00C97707BD9840003A1578 /* NSPreferencesModuleProtocol.h in Headers */,
+				4B24EF9107C03CA9004D7AD6 /* NSPreferencesPatches.h in Headers */,
+				4BEBD8F007C4425C00E0938F /* ABKeyAttachmentCell.h in Headers */,
+				4B2C639807D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.h in Headers */,
+				4B78FF0807E26FA600E371F9 /* ABKeyWindowAugmentationsManager.h in Headers */,
+				4B78FF4607E276E800E371F9 /* NSWindow extensions.h in Headers */,
+				4B78FF6807E27B8300E371F9 /* ABCardWindowControllerPatches.h in Headers */,
+				4BAC503A07ED17D9006B0026 /* ABKeyEmailSearchResultsController.h in Headers */,
+				4BD942A407FF5139006B996C /* ABMainWindowControllerPatches.h in Headers */,
+				4BCA1FBB081C28D9009E0B9E /* NSDate extensions.h in Headers */,
+				4BCA211A081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.h in Headers */,
+				4BCA2507081F28C6009E0B9E /* ABUIControllerPatches.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1AC9600486D14A00FE50C9 /* ABKey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B4CA81409C3897C00E1BD96 /* Build configuration list for PBXNativeTarget "ABKey" */;
+			buildPhases = (
+				8D1AC9610486D14A00FE50C9 /* Headers */,
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				4B1F01890622F64E00799E84 /* CopyFiles */,
+				4B034B68060CFF37004918D6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Users/rsg/Developer/GPGME/build/;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					GPGME,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ABKey;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			dependencies = (
+			);
+			name = ABKey;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = ABKeyManager;
+			productReference = 4B8777050618ECD30030343E /* ABKey.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4B4CA81809C3897C00E1BD96 /* Build configuration list for PBXProject "ABKeyManager" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				2E58F360FFB2326E11CA0CBA /* Development */,
+				2E58F361FFB2326E11CA0CBA /* Deployment */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* ABKeyManager */;
+			projectDirPath = "";
+			targets = (
+				8D1AC9600486D14A00FE50C9 /* ABKey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BAC4FD607E90DBF006B0026 /* search-cancel.png in Resources */,
+				4B78008707E2921D00E371F9 /* search.png in Resources */,
+				4BEBD85F07C4262E00E0938F /* ABKey.defaults in Resources */,
+				4B00C9EE07BD9C4C003A1578 /* ABKeyPreferences.tiff in Resources */,
+				4BEEF52807B6A63600E2D957 /* Localizable.strings in Resources */,
+				4B9934E907DFF49400895421 /* license.txt in Resources */,
+				4BEEF35B07B6708D00E2D957 /* change log.rtf in Resources */,
+				4BAC506307ED1942006B0026 /* EmailSearchResults.nib in Resources */,
+				4BAC505907ED192E006B0026 /* ABKeyPreferences.nib in Resources */,
+				4BEEF46707B6971F00E2D957 /* keyInfo.nib in Resources */,
+				4B105273061269E4003063C2 /* arrow-right.tiff in Resources */,
+				4BF7CAA808061FFF00DBC74F /* readme.rtfd in Resources */,
+				4B10527A06126ABD003063C2 /* arrow-down.tiff in Resources */,
+				4B10527B06126ABD003063C2 /* arrow-left.tiff in Resources */,
+				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
+				4BCA2190081C6BF5009E0B9E /* padlock.png in Resources */,
+				4BCA2191081C6BF5009E0B9E /* padlockAndPencil.png in Resources */,
+				4BCA2192081C6BF5009E0B9E /* pencil.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC96B0486D14A00FE50C9 /* ABKeyManager.m in Sources */,
+				4BEACF5707A8863E009BB28A /* ABDetailedKeyInfoController.m in Sources */,
+				4BEEEEFF07B598F400E2D957 /* GPGMEController.m in Sources */,
+				4BEEEF6B07B5A0F500E2D957 /* GPGKey extensions.m in Sources */,
+				4BEEF0FA07B5B82E00E2D957 /* GPGSubkey extensions.m in Sources */,
+				4BEEF15C07B5BE6200E2D957 /* GPGUserID extensions.m in Sources */,
+				4BEEF18C07B5C2DD00E2D957 /* ABSignaturesViewController.m in Sources */,
+				4BEEF29207B5DF5E00E2D957 /* GPGKeySignature extensions.m in Sources */,
+				4BEEF32307B66E0F00E2D957 /* PatchingFunctions.m in Sources */,
+				4BEEF32507B66E1200E2D957 /* ABInputControllerPatches.m in Sources */,
+				4BEEF32707B66E1400E2D957 /* ABTextViewPatches.m in Sources */,
+				4BEEF32907B66E1600E2D957 /* ABTemplatePrefsPatches.m in Sources */,
+				4BA81E0307B9B39100A352E8 /* ABKeyStatusColourTransformer.m in Sources */,
+				4B00C90B07BD8FF6003A1578 /* ABKeyPreferenceModule.m in Sources */,
+				4B24EF9207C03CA9004D7AD6 /* NSPreferencesPatches.m in Sources */,
+				4BEBD8F107C4425C00E0938F /* ABKeyAttachmentCell.m in Sources */,
+				4B2C639907D6B09C0040D3F8 /* ABKeyGlobalAnimationTimer.m in Sources */,
+				4B78FF0907E26FA600E371F9 /* ABKeyWindowAugmentationsManager.m in Sources */,
+				4B78FF4707E276E800E371F9 /* NSWindow extensions.m in Sources */,
+				4B78FF6907E27B8300E371F9 /* ABCardWindowControllerPatches.m in Sources */,
+				4BAC503B07ED17D9006B0026 /* ABKeyEmailSearchResultsController.m in Sources */,
+				4BE61A1107EE527B0093B147 /* ABKeyEmailSearchSelectButtonCell.m in Sources */,
+				4BD942A507FF5139006B996C /* ABMainWindowControllerPatches.m in Sources */,
+				4BCA1FBC081C28D9009E0B9E /* NSDate extensions.m in Sources */,
+				4BCA211B081C6469009E0B9E /* ABKeyAlgorithmTypeImageTransformer.m in Sources */,
+				4BCA2508081F28C6009E0B9E /* ABUIControllerPatches.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4BAC505807ED192E006B0026 /* ABKeyPreferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B00C95407BD9613003A1578 /* English */,
+			);
+			name = ABKeyPreferences.nib;
+			sourceTree = "<group>";
+		};
+		4BAC506207ED1942006B0026 /* EmailSearchResults.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BAC504B07ED187D006B0026 /* English */,
+			);
+			name = EmailSearchResults.nib;
+			sourceTree = "<group>";
+		};
+		4BEEF46607B6971F00E2D957 /* keyInfo.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BEEEED507B58E6400E2D957 /* English */,
+			);
+			name = keyInfo.nib;
+			sourceTree = "<group>";
+		};
+		4BEEF52607B6A61900E2D957 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BEEF52207B6A60E00E2D957 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D1AC97B0486D23100FE50C9 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B4CA81509C3897C00E1BD96 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/rsg/Developer/GPGME/build/;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					GPGME,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ABKey;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		4B4CA81609C3897C00E1BD96 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/rsg/Developer/GPGME/build/;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = BUNDLE;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					GPGME,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ABKey;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		4B4CA81709C3897C00E1BD96 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /Users/rsg/Developer/GPGME/build/;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					GPGME,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ABKey;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		4B4CA81909C3897C00E1BD96 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+			};
+			name = Development;
+		};
+		4B4CA81A09C3897C00E1BD96 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+			};
+			name = Deployment;
+		};
+		4B4CA81B09C3897C00E1BD96 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B4CA81409C3897C00E1BD96 /* Build configuration list for PBXNativeTarget "ABKey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B4CA81509C3897C00E1BD96 /* Development */,
+				4B4CA81609C3897C00E1BD96 /* Deployment */,
+				4B4CA81709C3897C00E1BD96 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		4B4CA81809C3897C00E1BD96 /* Build configuration list for PBXProject "ABKeyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B4CA81909C3897C00E1BD96 /* Development */,
+				4B4CA81A09C3897C00E1BD96 /* Deployment */,
+				4B4CA81B09C3897C00E1BD96 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

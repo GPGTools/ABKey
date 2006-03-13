@@ -1,0 +1,75 @@
+/* status messages on the console */
+"GPGME framework loaded"="GPGME framework loaded";
+"Error, framework failed to load\nAborting."="Error, framework failed to load\nAborting.";
+"ABKey Plugin loaded"="ABKey Plugin loaded";
+
+/*popup menu item*/
+"Manage GPG Key(s)"="Manage GPG Key(s)";
+
+/*template preferences menu item*/
+"GPGMail Options"="GPGMail Options";
+
+/*field*/
+"Sign"="Sign";
+"Encrypt"="Encrypt";
+"PGP/Mime"="PGP/Mime";
+"GPGKey"="GPGKey";
+
+/*key status*/
+"(revoked)"="(revoked)";
+"(invalid)"="(invalid)";
+"(expired)"="(expired)";
+"(disabled)"="(disabled)";
+
+/*option setting*/
+"default signing"="default signing";
+"always sign"="always sign";
+"never sign"="never sign";
+"default encrypting"="default encrypting";
+"always encrypt"="always encrypt";
+"never encrypt"="never encrypt";
+"default message format"="default message format";
+"use mime message format"="use mime message format";
+"use inline message format"="use inline message format";
+	
+
+/*field label*/
+"gpg key"="gpg key";
+"gpg mail"="gpg mail";
+
+
+/*popup option*/
+"default"="default";
+"always"="always";
+"never"="never";
+
+/*popup label*/
+"sign"="sign.";
+"encrypt"="encrypt.";
+"use mime message format"="use mime message format.";
+
+/*tooltip*/
+"GPGKey Tooltip"="Created: %@\nExpires: %@\nLength: %i\nType: %@\nTrust/Status: %@\n%@";
+"GPGMail sign setting"="GPGMail sign setting";
+"GPGMail encrypt setting"="GPGMail encrypt setting";
+"GPGMail pgp/mime setting"="GPGMail pgp/mime setting";
+
+"email search tooltip"="Search the Key Server for keys matching the current contact's email addresses.";
+
+"refresh tooltip"="Refresh this key from the Key Server.";
+
+/*GPGKey Status*/
+"Revoked"="Revoked";
+"Invalid"="Invalid";
+"Disabled"="Disabled";
+"Expired"="Expired";
+"Active"="Active";
+
+/*GPGKeySignature Status*/
+"Revocation"="Revocation";
+
+
+/*keyserver problems*/
+"async problem message text"="There was a problem communicating with the Keyserver.";
+"async problem informative text"="Please check you have a working Internet connection and that you have configured an appropriate server for GnuPG to use (commonly configured in the GnuPG Preference Pane)";
+

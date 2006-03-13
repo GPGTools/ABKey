@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {
+            CLASS = ABGPGPreferenceModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {preferenceBox = NSBox; preferenceView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {gotoWebsite = id; }; 
+            CLASS = ABKeyPreferenceModule; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {preferenceBox = NSBox; preferenceView = NSView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

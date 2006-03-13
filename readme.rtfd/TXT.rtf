@@ -1,0 +1,263 @@
+{\rtf1\mac\ansicpg10000\cocoartf824
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fmodern\fcharset77 CourierNewPSMT;\f2\fswiss\fcharset77 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red179\green0\blue66;\red128\green128\blue128;
+}
+\paperw11900\paperh16840\vieww11880\viewh11400\viewkind1\viewscale100
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\qc
+
+\f0\fs42 \cf0 Welcome to ABKey
+\fs24 \
+
+\fs28 the Address Book PGP Key Manager plugin\
+
+\fs24 Beta 0.5.2 (2005-05-08)\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+\
+\cf2 Please note:\cf0 \
+This is BETA software. Please report bugs because there are bound to be quite a few! Oh, and while you're at it, feature requests are always nice to receive ;) Bug reports and feature requests can be emailed to:\
+	abkey@far-blue.co.uk\
+\
+\cf2 Tiger Users:\cf0 \
+Although I hope I have fixed all Tiger related bugs and issues in this bug-fix update, there is one rather bigger issue with Tiger's version of Address Book which will take longer to resolve. As of Tiger, Address Book loads it's plugins "lazily" meaning it only loads them when it first thinks it needs them, rather than on startup. The result of this is that ABKey is not activated until the first time you move the mouse over a field in a card that has an associated popup menu - such as email, address, phone number or aim chat. Furthermore, Address Book caches it's preference panes so, if you open the Address Book preferences before ABKey has been activated, you will not then be able to access ABKey's preference pane even after it has become active. Obviously this is unacceptable but there is no simple solution so please allow me a little time to find the best way to circumvent the Address Book's new behaviour.\
+\
+\
+
+\fs34 Contents\
+\pard\tx585\tx1040\tqr\tx6620\ql\qnatural
+
+\fs24 \cf0 	Installation	2\
+	Usage Overview	2\
+	Viewing key info	2\
+		
+\fs22 Summary view	2\
+		Detailed View	3\
+
+\fs24 	Setting per-contact GPGMail preferences	4\
+	ABKey Preferences	5\
+	Refreshing keys	6\
+	Searching for new keys	6\
+	Uninstalling	7\
+	System Requirements	7\
+	Obtaining the latest updates	7\
+	Important Notes	7\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\fs34 \cf0 \
+\
+\
+\
+\
+Installation.\
+
+\fs24 The 
+\f1 ABKey.bundle 
+\f0 package should be copied to either:\
+\
+	
+\f1 /Library/Address Book Plug-Ins/
+\f0 \
+	(for all users)\
+or\
+	
+\f1 ~/Library/Address Book Plug-Ins/
+\f0 \
+	(for just the current user.  '~' means in your home space)\
+\
+If the 
+\f1 Address Book Plug-Ins
+\f0  folder does not exist, create it. Once you have copied the bundle, (re)start Address Book.\
+\
+\
+\
+
+\fs34 Usage Overview.\
+
+\fs24 ABKey is a plugin for Apple's Address Book that provides a friendly interface to the GnuPG key information for your Address Book Contacts. It provides summary and detailed key information for any Contact with one or more keys in your keychain (based on their email addresses) as well as allowing you to refresh key information and search for new keys on a Key Server.\
+\
+ABKey also integrates with recent versions of GPGMail (http://www.sente.ch/software/GPGMail/) \'d0 a GnuPG encryption plugin for Apple's Mail app. Together, ABKey and GPGMail allow you to specify signing and encryption preferences on a per-contact basis. You can now specifically always encrypt when emailing one particular contact while explicitly not encrypting or signing when emailing another contact \'d0 useful for email lists and contacts still using older versions of Outlook or Outlook Express.\
+\
+\
+\
+
+\fs34 Viewing Key Information.\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\fs30 \cf0 Summary View\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\fs24 \cf0 	By default, if you are viewing a contact who has an email address that matches with an address in your gpg keychain, some basic information for the relevant key(s) is shown. For example, this is what is shown for my information:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic basic-key-info.png \width5460 \height2340
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 The first key is my current key. It has no special status and has Ultimate trust (because it is mine). The second is an old key which has expired and which has unknown trust. The trust levels are detailed in the GPG documentation.\
+\
+Please refer to the chapter on setting ABKey's preferences for the option to hide the display of disabled, expired, revoked and invalid keys.\
+\
+A summary of the key's spec. (creation and expiry dates, length, type, status/trust and fingerprint) are available in the key's ToolTip. Hover the mouse pointer over any key and after a couple of seconds the tooltip will appear. For example (for my key):\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Picture 1.pdf \width5760 \height1960
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+
+\fs30 \cf0 Detailed View
+\fs24 \
+If you wish to see more detailed information about a key, click the 'gpg key' label next to the key and select "Manage GPG Key(s)". This will bring up a detailed dialogue, an example of which is shown below (again, for my key):\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Picture 2.pdf \width8260 \height5780
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+Clicking the tabs will show more detailed information for the key.\
+Although the dialogue will open to show the key for which you selected 'Manage', you can move through all the keys related to the current contact using the forward and back arrows top left and right.\
+\
+Throughout the detailed view tabs, key, user ID and Signature information displayed in \cf3 dark red \cf0 is revoked or invalid while information shown in \cf4 light grey \cf0 is disabled or expired. The 
+\f2\b bold
+\f0\b0  key in the Keys tab is the primary key.\
+\
+\
+\
+
+\fs34 Setting per-contact GPGMail preferences\
+
+\fs24 The ABKey plugin can co-operate with GPGMail (http://www.sente.ch/software/GPGMail/) to provide you with finer control over how GPGMail behaves when you send a Contact an email. This allows you to specify, for instance, that you always want to encrypt emails to a contact.\
+\
+By default, GPGMail preferences will appear for each contact \'d0 an example of which is shown below:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Picture 4.pdf \width4400 \height1000
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 Here, no contact-specific preferences have been set for signing or for which message format to use, so GPGMail will use it's global defaults. However, GPGMail has been explicitly requested to always encrypt emails to this contact (assuming that it can), overriding the global defaults.\
+\
+A preference is changed by pressing the normal card 'Edit' button. You can then select from the options available for each preference in it's popup menu. The "Mime Message Format" field allows you to select whether to use the default GPGMail preference for adding signature and encryption information to an email or whether to always force the use of the newer pgp/mime standard. If you work in a predominantly Outlook or Outlook Express environment, you may wish to set GPGMail to use the Inline message format by default and then 'upgrade' specific contacts to use the newer (but Outlook Express incompatible) pgp/mime format. Note that the Inline message format cannot cope with attachments so GPGMail will automatically convert any email with attachments to pgp/mime anyway.\
+\
+Turning off the GPGMail options fields will not delete custom preferences you may have set. You can turn the fields off in the Template preferences simply by clicking the red '-' symbol next to them (as you would for any other Address Book field). If you have turned off the GPGMail options fields, you can turn them on again by selecting the field from the drop-down list in the Template preferences pane or from the Card -> Add Field main menu.\
+\
+You can specify whether you wish the GPGMail options fields to show at the top or the bottom of the Contact's card in the ABKey preferences pane.\
+
+\fs34 ABKey Preferences\
+\
+
+\fs24 \
+     {{\NeXTGraphic Picture 5.pdf \width7080 \height5760
+}¬}\
+\
+\
+ABKey installs an additional preference pane for the Address Book which allows you to control how the plugin behaves. By default, ABKey will display all keys for a contact \'d0 including revoked, invalid, expired and disabled keys. You may turn off display of these keys by unchecking the relevant tick-box.\
+\
+You can control whether the GPGMail options fields display at the top of the card (below the title and key fields) or at the bottom of the card (just above the Notes field) using the drop-down menu.\
+\
+Checking the 'Keyserver Refresh buttons' will enable in-card refresh buttons per key. See Refreshing Key Information (below) for more information on this.\
+\
+Checking the 'Show card search button' field will allow you to search the Key Server for new keys for a Contact. See the chapter on searching for new keys (below) for more information on this.\
+\
+\
+\
+\
+\
+\
+
+\fs34 Refreshing Key Information\
+
+\fs24 As more people sign each other's keys, building up the Web Of Trust, they submit their updates to Key Servers. In order to make sure you have an up-to-date key for a Contact, you can refresh the key from the Key Server. \
+\
+If you open the detailed key info pane for a contact, you can press the Refresh button to contact the key server and update the key.\
+\
+If you have turned on Keyserver Refresh Buttons in the ABKey Preference pane (see previous chapter), you will see a refresh icon next to each key entry, for example:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Picture 3.pdf \width3880 \height360
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+Clicking the refresh icon will start a key refresh.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+
+\fs34 Searching for new keys\
+
+\fs24 When you have turned on the 'Card search button' in the ABKey preference pane, an additional button will appear below the Contact's card. For example:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic Picture 6.pdf \width580 \height360
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0 \
+Clicking this button will contact the Key Server and search for keys matching any of the email addresses for the current Contact. If any keys are found, a dialogue box will appear where you can view basic info for each matching key. By default, any keys which are non revoked and which do not already exist in your local keychain will be checked, ready for importing. For example:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 {{\NeXTGraphic 1__#$!@%!#__Picture 3.pdf \width3360 \height2440
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural
+\cf0 \
+\
+\
+\pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
+\cf0  However, you may manually check and uncheck keys to your needs before importing them. Importing keys you already have locally will result in the local key being refreshed.\
+
+\fs34 Uninstalling
+\fs24 \
+To uninstall the ABKey plugin:\
+	Quit Address Book\
+	Delete the 
+\f1 ABKey.bundle 
+\f0 package from the folder you copied it to.\
+		Either:\
+		
+\f1 /Library/Address Book Plug-Ins/\
+		
+\f0 or
+\f1 \
+		~/Library/Address Book Plug-Ins/
+\f0 \
+ 	Restart Address Book\
+\
+\
+\
+
+\fs34 System Requirements\
+
+\fs24 Mac OSX 10.3 (previous version of Address Book didn't support plugins)\
+GPG 1.2 upwards\
+GPGMail version d38.1 or higher (for per-contact preference support)\
+\
+\
+\
+
+\fs34 Obtaining the latest updates\
+
+\fs24 The most recent version of this plugin and it's associated source code are available from:\
+\
+http://www.far-blue.co.uk\
+\
+\
+\
+
+\fs34 Important Notes\
+
+\fs24 \'a9 2005 Robert Goldsmith / Far-Blue.\
+I reserve all rights to this software. This software is provided "as is" and with no warranty. I take no responsibility for any damage this software may cause, including but not limited to, through omission or error.\
+\
+For licensing information, please see the included file.\
+}
