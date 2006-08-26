@@ -38,7 +38,7 @@ id sharedAnimationTimer=nil;
 -(void)startAnimationTimer
 {
 //  NSLog(@"Initiating animation timer");
-  animationTimer=[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(animationTimerEvent:) userInfo:nil repeats:YES];
+  animationTimer=[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(animationTimerEvent:) userInfo:nil repeats:YES];
 }
  
 

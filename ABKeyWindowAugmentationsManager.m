@@ -75,7 +75,7 @@ id sharedABKeyWindowAugmentationsManager=nil;
 
 	NSRect searchFrameRect=[[window contentView] frame];
 	searchFrameRect.origin.x+=searchFrameRect.size.width-45;
-	if([[controller uiController] layoutType]==1)
+	if((int)[[controller uiController] layoutType]==1)
 	  searchFrameRect.origin.x-=LayoutTypeOffset;
 	searchFrameRect.origin.y=3;
 	searchFrameRect.size.width=searchFrameRect.size.height=16;
@@ -132,7 +132,7 @@ id sharedABKeyWindowAugmentationsManager=nil;
   NSArray *windowAugmentations=[[augmentations objectForKey:identifier] allValues];
   NSEnumerator *augmentationEnumerator=[windowAugmentations objectEnumerator];
   NSView *currentAugmentation;
-  while(currentAugmentation=[augmentationEnumerator nextObject])
+  while((currentAugmentation=[augmentationEnumerator nextObject]))
 	[currentAugmentation removeFromSuperview];
 }
 
@@ -148,7 +148,7 @@ id sharedABKeyWindowAugmentationsManager=nil;
   NSArray *allWindows=[augmentations allKeys];
   NSEnumerator *windowEnumerator=[allWindows objectEnumerator];
   id currentWindowIdentifier;
-  while(currentWindowIdentifier=[windowEnumerator nextObject])
+  while((currentWindowIdentifier=[windowEnumerator nextObject]))
   {
 	[self undressWindowWithIdentifier:currentWindowIdentifier];
 	[augmentations removeObjectForKey:currentWindowIdentifier];
@@ -162,7 +162,7 @@ id sharedABKeyWindowAugmentationsManager=nil;
   NSArray *windowAugmentations=[[augmentations objectForKey:[window identifierString]] allValues];
   NSEnumerator *augmentationEnumerator=[windowAugmentations objectEnumerator];
   NSView *currentAugmentation;
-  while(currentAugmentation=[augmentationEnumerator nextObject])
+  while((currentAugmentation=[augmentationEnumerator nextObject]))
   {
 	frame=[currentAugmentation frame];
 	if(layout==1)

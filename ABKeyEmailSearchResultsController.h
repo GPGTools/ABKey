@@ -7,14 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 
 @interface ABKeyEmailSearchResultsController : NSObject
 {
   ABPerson *person;
   GPGContext *context;
   NSMutableArray *keys;
-  GPGKey *currentKey;
+  GPGRemoteKey *currentKey;
 //  IBOutlet NSObjectController *currentSelectionController;
   IBOutlet NSOutlineView *outlineView;
   IBOutlet NSWindow *window;
@@ -31,12 +31,12 @@
 
 -(id)initWithReturnedContext:(GPGContext *)context forPerson:(ABPerson *)thePerson;
 
--(void)addKeyToSelected:(GPGKey *)newKey;
--(void)removeKeyToSelected:(GPGKey *)newKey;
+-(void)addKeyToSelected:(GPGRemoteKey *)newKey;
+-(void)removeKeyFromSelected:(GPGRemoteKey *)newKey;
 
 //bindings
--(GPGKey *)currentKey;
--(void)setCurrentKey:(GPGKey *)newKey;
+-(GPGRemoteKey *)currentKey;
+-(void)setCurrentKey:(GPGRemoteKey *)newKey;
 
 
   //window delegate methods
@@ -47,7 +47,7 @@
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification;
 
 //Outline view datasource methods
-- (id)outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item;
+- (id)outlineView:(NSOutlineView *)outlineView child:(int)childIndex ofItem:(id)item;
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item;
 - (int)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item;
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;

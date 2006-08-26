@@ -25,8 +25,7 @@
 
 -(NSString *)shortKeyID
 {
-  while(true);
-  return @"";
+	return [[self key] shortKeyID];
 }
 
 //Bindings stuff

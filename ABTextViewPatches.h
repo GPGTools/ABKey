@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 
 @interface ABTextViewPatches : NSTextView
 +(void)initialize;

@@ -63,12 +63,12 @@
 
 
 
--(NSMutableAttributedString *)createPopupAttachmentWithTitles:(NSArray *)titles selectedTitleIndex:(int)selectedItemIndex label:(NSString *)label tag:(int)tag inputController:(id)inputController target:(id)target action:(SEL)action
+-(NSMutableAttributedString *)createPopupAttachmentWithTitles:(NSArray *)titles selectedTitleIndex:(unsigned int)selectedItemIndex label:(NSString *)label tag:(int)tag inputController:(id)inputController target:(id)target action:(SEL)action
 {
   NSTextAttachment *popupAttachment;
   NSMutableAttributedString *attachmentString;
   id popupCell;
-  int i;
+  unsigned int i;
       
   popupCell=[[[NSClassFromString(@"ABInstantPopUpButtonCell") alloc] initWithInputController:inputController andField:@"GPGOptions"] autorelease];
   
@@ -146,7 +146,7 @@
   NSString *keyStatus;
   NSArray *popupsArray=nil;
   
-  while(currentKey=[gpgKeyEnumerator nextObject])
+  while((currentKey=[gpgKeyEnumerator nextObject]))
   {
 	if([currentKey isKeyRevoked])
 	{
@@ -326,7 +326,7 @@
   
   
   //move through each fieldname
-  int i;
+  unsigned int i;
   NSString *currentField;
   NSMutableAttributedString *fieldNameString;
   for(i=0;i<[fields count];i++)

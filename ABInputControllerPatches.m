@@ -77,10 +77,10 @@
     
   compositeEditMode=([self editMode]?1+([self templateMode]?1:0):0);
   //find the top insertion point
-  topInsertionPoint=[textView findTopInjectionPointAndTidyUpHeaderSpaceForEditMode:compositeEditMode];
+  topInsertionPoint=(int)[textView findTopInjectionPointAndTidyUpHeaderSpaceForEditMode:compositeEditMode];
   //inject the gpg key info fields 
   if(![self editMode] && keys!=nil && [keys count]!=0)
-	topInsertionPoint=[textView injectGPGKeyFields:keys atInsertionPoint:topInsertionPoint withInputController:self];
+	topInsertionPoint=(int)[textView injectGPGKeyFields:keys atInsertionPoint:topInsertionPoint withInputController:self];
   
   [keys release];
   [context release];
@@ -92,7 +92,7 @@
 	if([[NSUserDefaults standardUserDefaults] integerForKey:@"ABKeyGPGMailOptionsDisplayLocation"]==0)
 	  insertionPoint=topInsertionPoint;
 	else
-	  insertionPoint= [textView findBottomInjectionPoint];
+	  insertionPoint=(int)[textView findBottomInjectionPoint];
 	
 	[textView injectGPGOptionsFields:[[self displayedCard] valueForProperty:@"GPGOptions"] atInsertionPoint:insertionPoint withInputController:self editMode:compositeEditMode];
   }
@@ -120,7 +120,7 @@
 
 
 -(BOOL)templateMode
-{return [[self displayedCard] isEmptyPerson];}
+{return (BOOL)[[self displayedCard] isEmptyPerson];}
 
 -(BOOL)importMode
 {return (![self templateMode] && [[[self textView] window] delegate]==nil);}
@@ -129,7 +129,7 @@
 -(id)valueForProperty:(id)field
 {
 //  NSLog([field description]);
-  id returnValue;
+  id returnValue=nil;
   if([self templateMode])
 	return [self originalValueForProperty:field];
 
@@ -194,7 +194,7 @@ if([field hasPrefix:@"GPGOptions"])
   if([field hasPrefix:@"GPGOptions"])
 	return [[NSUserDefaults standardUserDefaults] boolForKey:@"ABKeyGPGMailOptionsVisible"];
   else
-	return [self originalIsFieldVisible:field];
+	return (BOOL)[self originalIsFieldVisible:field];
 }
 
 

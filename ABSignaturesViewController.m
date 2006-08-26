@@ -7,7 +7,7 @@
 //
 
 #import "ABSignaturesViewController.h"
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 #import "GPGKeySignature extensions.h"
 
 
@@ -42,7 +42,7 @@
   NSEnumerator *uidEnumerator=[[newSourceKey userIDs] objectEnumerator];
   GPGUserID *currentUID;
   
-  while(currentUID=[uidEnumerator nextObject])
+  while((currentUID=[uidEnumerator nextObject]))
 	[newSignatures addObject:[NSArray arrayWithObjects:[currentUID userID],[currentUID signatures],nil]];
 	
   
@@ -78,12 +78,12 @@
 
 //Outline view datasource methods
 
-- (id)outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item
+- (id)outlineView:(NSOutlineView *)outlineView child:(int)childIndex ofItem:(id)item
 {
   if(item==nil)
-	return [keySignatures objectAtIndex:index];
+	return [keySignatures objectAtIndex:childIndex];
   else
-	return [[item objectAtIndex:1] objectAtIndex:index];
+	return [[item objectAtIndex:1] objectAtIndex:childIndex];
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item

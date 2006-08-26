@@ -26,7 +26,7 @@
 -(id)inputController
 {
   id inputController;
-  object_getInstanceVariable(self,"_cardInputController" ,&inputController);
+  object_getInstanceVariable(self,"_cardInputController" ,(void **)&inputController);
   return inputController;
 }
 

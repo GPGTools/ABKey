@@ -27,7 +27,7 @@
   if([sender tag]==255)//GPGMail Options info
 	return ![[self inputController] isFieldVisible:@"GPGOptions"];
   
-  return [self originalValidateMenuItem:sender];
+  return (BOOL)[self originalValidateMenuItem:sender];
 }
 
 
@@ -41,6 +41,7 @@
 
 -(void)refreshNotification:(NSNotification *)notification
 {
+	NSLog(@"Refresh");
   [[NSNotificationCenter defaultCenter] postNotificationName:@"ABTemplateLayoutHasChanged" object:nil userInfo:nil];
 }
 

@@ -1,5 +1,5 @@
 //
-//  GPGKeySignature extensions.h
+//  GPGKey extensions.h
 //  ABKeyManager
 //
 //  Created by Robert Goldsmith on 06/02/2005.
@@ -9,13 +9,15 @@
 #import <MacGPGME/MacGPGME.h>
 #import <Cocoa/Cocoa.h>
 
-@interface GPGKeySignature (AB_gui_extensions)
+@interface GPGRemoteKey (AB_gui_extensions)
 
 -(NSString *)statusDescription;
--(NSString *)userDescription;
--(NSString *)shortSignerKeyID;
-
+-(NSString *)uidCount;
 -(NSString *)formattedCreationDate;
 -(NSString *)formattedExpirationDate;
+-(NSString *)formattedShortKeyID;
+
+//binding errors
+-(id)valueForUndefinedKey:(NSString *)key;
 
 @end

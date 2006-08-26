@@ -18,7 +18,7 @@ id sharedGPGMEController=nil;
 //convenience method to find all keys associated with an address book record
 +(NSArray *)keysForRecord:(ABPerson *)person gpgContext:(GPGContext *)context
 {
-  int i;
+  unsigned int i;
   id emailMultiValue;
   NSMutableArray *emailAddresses=[NSMutableArray array];
   
@@ -66,7 +66,7 @@ id sharedGPGMEController=nil;
   //check to see if a gpg context is associated with the identifier
   //if it is, immediately notify the registering object
   GPGContext *activeContext;
-  if(activeContext=[activeAsyncOperations objectForKey:identifier])
+  if((activeContext=[activeAsyncOperations objectForKey:identifier]))
   {
 	//NSLog(@"observer registering for already active context. Sending notification");
 	[observer performSelector:selector withObject:[NSNotification notificationWithName:identifier object:@"asyncOperationStarted"]];
@@ -80,27 +80,26 @@ id sharedGPGMEController=nil;
   [interestedParties removeObserver:observer];}
 
 
-//When a gpg context async activity starts, the context is created and added to the active contexts dictionary with the key for the entry being the unique identifier. Then a notification is sent, informing all interested objects that the async opperation has started.
+//When a gpg context async activity starts, the context is created and added to the active contexts dictionary with the key for the entry being the unique identifier. Then a notification is sent, informing all interested objects that the async operation has started.
 
 -(void)refreshGPGKeyWithFingerprint:(NSString *)fingerprint
 {
   //create a gpg context, search for the key based on key fingerprint.
   // NSLog(@"Creating gpg context for key refresh");
-  GPGContext *context=[[GPGContext alloc] init];
+  GPGContext *context=[[[GPGContext alloc] init] autorelease];
   GPGKey *key;
   
   [context setUserInfo:[NSMutableDictionary dictionaryWithObjectsAndKeys:@"refresh",@"operation",nil]];
   
   //if the key is found, post a 'start' notification for the keyID (using it as the unique identifier)
   //then start the async gpg context download from key server
-  if(key=[context keyFromFingerprint:fingerprint secretKey:NO])
+  if((key=[context keyFromFingerprint:fingerprint secretKey:NO]))
   {
 //	NSLog(@"Key %@ found. Will try to refresh it.",[key shortKeyID]);
 	[activeAsyncOperations setObject:context forKey:fingerprint];
 	[interestedParties postNotificationName:fingerprint object:@"asyncOperationStarted"];
 	[context asyncDownloadKeys:[NSArray arrayWithObject:key] serverOptions:nil];
   }
-  [context release];
 }
 
 
@@ -109,7 +108,7 @@ id sharedGPGMEController=nil;
   //create a gpg context, search the key server based on a person's email addresses
   //NSLog(@"Creating gpg context for key search");
   
-  int i;
+  unsigned int i;
   GPGContext *context=nil;
   id emailMultiValue;
   NSMutableArray *emailAddresses=[NSMutableArray array];
@@ -129,13 +128,11 @@ id sharedGPGMEController=nil;
   
   if([emailAddresses count]>0)
   {
-	//NSLog(@"Email addresses used in search: %@",[emailAddresses description]);
-	context=[[GPGContext alloc] init];
+	context=[[[GPGContext alloc] init] autorelease];
 	[context setUserInfo:[NSMutableDictionary dictionaryWithObjectsAndKeys:@"emailSearch",@"operation",person,@"person",nil]];
 	[activeAsyncOperations setObject:context forKey:[person uniqueId]];
 	[interestedParties postNotificationName:[person uniqueId] object:@"asyncOperationStarted"];
 	[context asyncSearchForKeysMatchingPatterns:emailAddresses serverOptions:nil];
-	[context release];  
 	return YES;
   }
   return NO;
@@ -197,7 +194,7 @@ id sharedGPGMEController=nil;
 {
   //find the associated gpg context and send it an interruptAsyncOperation  
   GPGContext *activeContext;
-  if(activeContext=[activeAsyncOperations objectForKey:identifier])
+  if((activeContext=[activeAsyncOperations objectForKey:identifier]))
   {
 	//NSLog(@"Interrupting operation!");
 	

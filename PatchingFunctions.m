@@ -18,13 +18,13 @@ void listMethodsForClassNamed(NSString *className)
   
   NSLog(@"Instance Methods for %@:",className);
   // Each call to class_nextMethodList returns one methodList
-  while(methodList = class_nextMethodList(theClass, &iterator ))
+  while((methodList=class_nextMethodList(theClass,&iterator)))
 	for(i=0;i<methodList->method_count;i++)
 	  NSLog(@"%s - %s\n",(char *)((methodList->method_list[i]).method_name),(methodList->method_list[i]).method_types);
   
   NSLog(@"Class Methods for %@:",className);
   theClass=objc_getMetaClass(theClass->name);
-  while(methodList = class_nextMethodList(theClass, &iterator ))
+  while((methodList=class_nextMethodList(theClass,&iterator)))
 	for(i=0;i<methodList->method_count;i++)
 	  NSLog(@"%s - %s\n",(char *)((methodList->method_list[i]).method_name),(methodList->method_list[i]).method_types);
   
@@ -50,7 +50,7 @@ void listInheritanceStackForClassNamed(NSString *className)
   
   do
 	NSLog(@"%s\n",currentClass->name);
-  while(currentClass=currentClass->super_class);
+  while((currentClass=currentClass->super_class));
 }
 
 void registerMethodWithNewClass(NSString *originalClass, SEL methodSelector, NSString *newClass)
@@ -69,7 +69,7 @@ void registerMethodWithNewClass(NSString *originalClass, SEL methodSelector, NSS
   class_addMethods(NSClassFromString(newClass),newMethod);
 }
 
-void renameMethodForClass(NSString *class, SEL methodSelector, char *newName)
+void renameMethodForClass(NSString *class, SEL methodSelector, const char *newName)
 {
   struct objc_method *theMethod=class_getInstanceMethod(NSClassFromString(class), methodSelector);
   if(theMethod==0)

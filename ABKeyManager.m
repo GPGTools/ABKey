@@ -51,11 +51,11 @@ NSString *pathToPluginBundleResource(NSString *resourceName, NSString *resourceT
   // because dyld looks in the app bundle by default
   // note: this only works if you weak-bind the gpgme library
   
-  NSString *frameworkPath=[[[NSBundle bundleForClass:[self class]] bundlePath] stringByAppendingPathComponent:@"Contents/Frameworks/GPGME.framework"];
+  NSString *frameworkPath=[[[NSBundle bundleForClass:[self class]] bundlePath] stringByAppendingPathComponent:@"Contents/Frameworks/MacGPGME.framework"];
   NSBundle *framework=[NSBundle bundleWithPath:frameworkPath];
   
   if([framework load])
-	NSLog(KeyManagerLocalizedString(@"GPGME framework loaded",@"framework loading"));
+	NSLog(KeyManagerLocalizedString(@"MacGPGME framework loaded",@"framework loading"));
   else
   {
 	NSLog(KeyManagerLocalizedString(@"Error, framework failed to load\nAborting.",@"framework loading"));

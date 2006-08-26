@@ -25,29 +25,36 @@
 {
   if([super init])
   {
+	  unsigned int i;
 	person=[thePerson retain];
 	context=[theContext retain];
 		
 	NSArray *keyArray=[[context operationResults] objectForKey:@"keys"];
 	NSArray *localKeys=[GPGMEController keysForRecord:thePerson gpgContext:theContext];
 
-	//NSLog(@"local keys: %@. remote keys: %@ and fingerprint %@",[[localKeys lastObject] shortKeyID],[[keyArray lastObject] shortKeyID],[[[keyArray lastObject] fingerprint] description]);
+//	NSLog(@"local keys: %@. remote keys: %@",[[localKeys lastObject] shortKeyID],[[keyArray lastObject] shortKeyID]);
 	
 	selectedKeys=[[NSMutableSet alloc] initWithCapacity:[keyArray count]];
 	keys=[[NSMutableArray alloc] initWithCapacity:[keyArray count]];
 	NSEnumerator *keyEnumerator=[keyArray objectEnumerator];
-	GPGKey *currentGPGKey;
-	while(currentGPGKey=[keyEnumerator nextObject])
+	GPGRemoteKey *currentGPGKey;
+	while((currentGPGKey=[keyEnumerator nextObject]))
 	{
 	  if(![keys containsObject:currentGPGKey])
 	  {
+		  BOOL existsLocally=NO;
 		[keys addObject:currentGPGKey];
-		if(![currentGPGKey isKeyRevoked] && ![localKeys containsObject:currentGPGKey])
+		for(i=0;i<[localKeys count];i++)
+			if([[[localKeys objectAtIndex:i] shortKeyID] isEqualToString:[currentGPGKey shortKeyID]])
+			{
+				existsLocally=YES;
+				break;
+			}
+		if(!existsLocally && ![currentGPGKey isKeyRevoked])
 		  [self addKeyToSelected:currentGPGKey];
 	  }
 	}
 		
-	
 	[NSBundle loadNibNamed:@"EmailSearchResults" owner:self];
 	
 	[self setCurrentKey:nil];
@@ -60,14 +67,14 @@
   return self;
 }
 
--(void)addKeyToSelected:(GPGKey *)newKey
+-(void)addKeyToSelected:(GPGRemoteKey *)newKey
 {
   if([selectedKeys count]==0)
 	[importKeys setEnabled:YES];
   [selectedKeys addObject:newKey];
 }
 
--(void)removeKeyFromSelected:(GPGKey *)newKey
+-(void)removeKeyFromSelected:(GPGRemoteKey *)newKey
 {
   [selectedKeys removeObject:newKey];
   if([selectedKeys count]==0)
@@ -75,12 +82,12 @@
 }
 
 //bindings
--(GPGKey *)currentKey
+-(GPGRemoteKey *)currentKey
 {
   return currentKey;
 }
 
--(void)setCurrentKey:(GPGKey *)newKey
+-(void)setCurrentKey:(GPGRemoteKey *)newKey
 {
   [self willChangeValueForKey:@"currentKey"];
   currentKey=newKey;
@@ -101,10 +108,10 @@
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
   id selectedItem=[outlineView itemAtRow:[outlineView selectedRow]];
-  if([selectedItem isKindOfClass:[GPGKey class]])
+  if([selectedItem isKindOfClass:[GPGRemoteKey class]])
 	[self setCurrentKey:selectedItem];
-  else if([selectedItem isKindOfClass:[GPGUserID class]])
-	[self setCurrentKey:[selectedItem key]];
+  else if([selectedItem isKindOfClass:[GPGRemoteUserID class]])
+	[self setCurrentKey:(GPGRemoteKey *)[selectedItem key]];
   else
 	  [self setCurrentKey:nil];
 }
@@ -113,16 +120,16 @@
 
 //Outline view datasource methods
 
-- (id)outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item
+- (id)outlineView:(NSOutlineView *)outlineView child:(int)childIndex ofItem:(id)item
 {
   if(item)
-	return [[item userIDs] objectAtIndex:index];
-  return [keys objectAtIndex:index]; //nil -> root items
+	return [[item userIDs] objectAtIndex:childIndex];
+  return [keys objectAtIndex:childIndex]; //nil -> root items
 }
 
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
-{ return [item isKindOfClass:[GPGKey class]];}
+{ return [item isKindOfClass:[GPGRemoteKey class]];}
 
 
 - (int)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item
@@ -138,19 +145,19 @@
 { 
   if([[tableColumn identifier] isEqualToString:@"select"])
   {
-	if([item isKindOfClass:[GPGKey class]])
+	if([item isKindOfClass:[GPGRemoteKey class]])
 	  return [NSNumber numberWithInt:[selectedKeys containsObject:item]];
 	return [NSNumber numberWithInt:-1];
   }
   else if([[tableColumn identifier] isEqualToString:@"info"])
   {
-	if([item isKindOfClass:[GPGKey class]])
+	if([item isKindOfClass:[GPGRemoteKey class]])
 	{
 	  if([item isKeyRevoked])
 		return [[[NSAttributedString alloc] initWithString:[item formattedShortKeyID] attributes:[NSDictionary dictionaryWithObject:[NSColor colorWithCalibratedRed:0.7 green:0.0 blue:0.0 alpha:1] forKey:NSForegroundColorAttributeName]] autorelease];
 	  return [item formattedShortKeyID];
 	}
-	else if([item isKindOfClass:[GPGUserID class]])
+	else if([item isKindOfClass:[GPGRemoteUserID class]])
  	  return [item userID];
   }
   return @"";

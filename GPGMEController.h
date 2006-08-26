@@ -7,7 +7,7 @@
 //
 
 #import <AddressBook/AddressBook.h>
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 #import <Cocoa/Cocoa.h>
 
 @interface GPGMEController : NSObject

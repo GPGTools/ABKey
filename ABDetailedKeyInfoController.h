@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <AddressBook/AddressBook.h>
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 
 @interface ABDetailedKeyInfoController : NSObject
 {

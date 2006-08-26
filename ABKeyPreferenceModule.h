@@ -23,7 +23,6 @@
 
 -(NSImage *)imageForPreferenceNamed:(NSString *)name;
 -(NSView *) viewForPreferenceNamed:(NSString *) name;
--(NSString *)titleForIdentifier:(NSString *)identifier;
 -(void)willBeDisplayed;
 - (BOOL)isResizable;
 

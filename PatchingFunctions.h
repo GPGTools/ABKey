@@ -14,7 +14,7 @@ void listMethodsForClassNamed(NSString *className);
 void listInstanceVariablesForClassNamed(NSString *className);
 void listInheritanceStackForClassNamed(NSString *className);
 void registerMethodWithNewClass(NSString *originalClass, SEL methodSelector, NSString *newClass);
-void renameMethodForClass(NSString *class, SEL methodSelector, char *newName);
+void renameMethodForClass(NSString *class, SEL methodSelector, const char *newName);
 void registerMethodFromClassInNewClassAndRenameOldMethodFromThisNewClass(NSString *classWithReplacementMethod, SEL methodSelector, NSString *classInWhichToRegisterNewMethod, NSString *newNameForMethodBeingReplacedInNewClass);
 void registerNewIDTypeInstanceVariableForClass(char *variableName, NSString *className);
 void registerNewSuperClassForClass(NSString *className, NSString *superClassName);

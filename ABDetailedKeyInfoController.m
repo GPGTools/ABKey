@@ -121,7 +121,7 @@
 
 -(void)displayInfoSheetForIdentifier:(id)identifier inWindow:(NSWindow *)theWindow
 {
-  int i=0;
+  unsigned int i=0;
   while(i<[keys count] && ![[[keys objectAtIndex:i] formattedShortKeyID] isEqualToString:identifier]) 
 	i++;
   

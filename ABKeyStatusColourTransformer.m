@@ -21,10 +21,12 @@
 {
   //bool value, true = red
   if([key isKindOfClass:[NSNumber class]])
+  {
 	if([key boolValue])
 	  return [NSColor colorWithCalibratedRed:0.7 green:0.0 blue:0.0 alpha:1];
 	else
 	  return [NSColor blackColor];
+  }
 
   //based on key details
   if(![key isKindOfClass:[GPGKey class]])

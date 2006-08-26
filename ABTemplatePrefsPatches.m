@@ -30,14 +30,14 @@
 -(id)inputController
 {
   id inputController;
-  object_getInstanceVariable(self,"_inputController" ,&inputController);
+  object_getInstanceVariable(self,"_inputController" ,(void **)&inputController);
   return inputController;
 }
 
 -(id)preferencesView
 {
   id preferencesView;
-  object_getInstanceVariable(self,"_preferencesView" ,&preferencesView);
+  object_getInstanceVariable(self,"_preferencesView" ,(void **)&preferencesView);
   return preferencesView;
 }
 
@@ -69,7 +69,7 @@
   if([sender tag]==255)//GPGMail Options info
 	return ![[self inputController] isFieldVisible:@"GPGOptions"];
   
-  return [self originalValidateMenuItem:sender];
+  return (BOOL)[self originalValidateMenuItem:sender];
 }
 
 

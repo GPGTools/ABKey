@@ -6,7 +6,7 @@
 //  Copyright 2005 Far-Blue. All rights reserved.
 //
 
-#import <GPGME/GPGME.h>
+#import <MacGPGME/MacGPGME.h>
 #import <Cocoa/Cocoa.h>
 
 @interface GPGKey (AB_gui_extensions)

@@ -107,7 +107,7 @@
 -(void)animationStep:(NSNotification *)notification
 {
   //NSLog(@"Animation step");
-  animationRotationAngle+=36;
+  animationRotationAngle+=18;
   if(animationRotationAngle>180)
   {
 	if(stopAfterFullRotation)
@@ -131,7 +131,7 @@
   trackingRectTag=[myView addTrackingRect:myFrame owner:self userData:nil assumeInside:NO];	
   
   if(toolTipTag!=-1)
-	[myView removeToolTip:toolTipTag];
+	[[myView superview] removeToolTip:toolTipTag];
   toolTipTag=[[myView superview] addToolTipRect:myFrame owner:self userData:nil];
 }
 
@@ -216,13 +216,13 @@
 
 -(void)dealloc
 {
+  [myView removeTrackingRect:trackingRectTag];
+  [[myView superview] removeToolTip:toolTipTag];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:NSViewFrameDidChangeNotification object:myView];
   [identifier release];
   [drawingPath release];
   [[GPGMEController sharedController] removeObserver:self];
   [self unregisterWithAnimationTimer];
-  [[NSNotificationCenter defaultCenter] removeObserver:self name:NSViewFrameDidChangeNotification object:myView];
-  [myView removeTrackingRect:trackingRectTag];
-  [myView removeToolTip:toolTipTag];
   
   [super dealloc];
 }
