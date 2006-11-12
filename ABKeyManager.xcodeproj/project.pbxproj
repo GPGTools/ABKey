@@ -219,7 +219,7 @@
 		4BEEF52207B6A60E00E2D957 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4BEEF63107B6AF6200E2D957 /* ABKeyManagerPluginBundleResourceAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyManagerPluginBundleResourceAccess.h; sourceTree = "<group>"; };
 		4BEEF69107B6B5B900E2D957 /* readme.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = readme.rtfd; sourceTree = "<group>"; };
-		4BEEF69207B6B5B900E2D957 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		4BEEF69207B6B5B900E2D957 /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = license.txt; sourceTree = "<group>"; };
 		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -684,6 +684,7 @@
 					MacGPGME,
 				);
 				PRODUCT_NAME = ABKey;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};

@@ -1,7 +1,7 @@
 ABKey License information
 ***********************
 
-All source code, resources and other supporting files © 2005 Robert Goldsmith / Far-Blue and covered by the Artistic License (see below) unless otherwise specified.
+All source code, resources and other supporting files © 2006 Robert Goldsmith / Far-Blue and covered by the Artistic License (see below) unless otherwise specified.
 
 
 This software incorporates the GPGME framework and gpgme library, which are both seperately covered by the LGPL.

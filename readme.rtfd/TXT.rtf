@@ -1,9 +1,9 @@
-{\rtf1\mac\ansicpg10000\cocoartf824
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf420
 {\fonttbl\f0\fswiss\fcharset77 Helvetica;\f1\fmodern\fcharset77 CourierNewPSMT;\f2\fswiss\fcharset77 Helvetica-Bold;
 }
 {\colortbl;\red255\green255\blue255;\red255\green0\blue0;\red179\green0\blue66;\red128\green128\blue128;
 }
-\paperw11900\paperh16840\vieww11880\viewh11400\viewkind1\viewscale100
+\paperw11905\paperh16837\vieww11880\viewh11400\viewkind1\viewscale100
 \pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\qc
 
 \f0\fs42 \cf0 Welcome to ABKey
@@ -11,16 +11,17 @@
 
 \fs28 the Address Book PGP Key Manager plugin\
 
-\fs24 Beta 0.5.2 (2005-05-08)\
+\fs24 Beta 0.6 (2006-11-12)\
 \pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
 \cf0 \
-\
 \cf2 Please note:\cf0 \
-This is BETA software. Please report bugs because there are bound to be quite a few! Oh, and while you're at it, feature requests are always nice to receive ;) Bug reports and feature requests can be emailed to:\
-	abkey@far-blue.co.uk\
+This is BETA software. Please report bugs because there are bound to be quite a few! Oh, and while you're at it, feature requests are always nice to receive ;) Bug reports and feature requests can be submitted via sourceforge:\
+	http://sourceforge.net/tracker/?group_id=162585\
+\
+If you would like to contact the development team directly, feel free to email at either  abkey@far-blue.co.uk  or  far-blue@users.sourceforge.net\
 \
 \cf2 Tiger Users:\cf0 \
-Although I hope I have fixed all Tiger related bugs and issues in this bug-fix update, there is one rather bigger issue with Tiger's version of Address Book which will take longer to resolve. As of Tiger, Address Book loads it's plugins "lazily" meaning it only loads them when it first thinks it needs them, rather than on startup. The result of this is that ABKey is not activated until the first time you move the mouse over a field in a card that has an associated popup menu - such as email, address, phone number or aim chat. Furthermore, Address Book caches it's preference panes so, if you open the Address Book preferences before ABKey has been activated, you will not then be able to access ABKey's preference pane even after it has become active. Obviously this is unacceptable but there is no simple solution so please allow me a little time to find the best way to circumvent the Address Book's new behaviour.\
+Although I hope I have fixed all Tiger related bugs and issues in this bug-fix update, there is one rather bigger issue with Tiger's version of Address Book which will take longer to resolve. As of Tiger, Address Book loads it's plugins "lazily" meaning it only loads them when it first thinks it needs them, rather than on startup. The result of this is that ABKey is not activated until the first time you move the mouse over a field in a card that has an associated popup menu - such as email, address, phone number or aim chat. Furthermore, Address Book caches it's preference panes so, if you open the Address Book preferences before ABKey has been activated, you will not then be able to access ABKey's preference pane even after it has become active. Obviously this is unacceptable but there is no simple solution so please allow me a little time to find the best way to circumvent the Address Book's new behaviour. I have high hopes that the Address Book developers at Apple (very nice chaps that they are) will update Address Book's plugin architecture to provide for loading plugins on (or just after) startup in OSX 10.5. Having talked to them, they are aware that some plugins need this behaviour so fingers crossed!\
 \
 \
 
@@ -44,12 +45,7 @@ Although I hope I have fixed all Tiger related bugs and issues in this bug-fix u
 	Important Notes	7\
 \pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
 
-\fs34 \cf0 \
-\
-\
-\
-\
-Installation.\
+\fs34 \cf0 Installation.\
 
 \fs24 The 
 \f1 ABKey.bundle 
@@ -151,7 +147,6 @@ Turning off the GPGMail options fields will not delete custom preferences you ma
 You can specify whether you wish the GPGMail options fields to show at the top or the bottom of the Contact's card in the ABKey preferences pane.\
 
 \fs34 ABKey Preferences\
-\
 
 \fs24 \
      {{\NeXTGraphic Picture 5.pdf \width7080 \height5760
@@ -165,6 +160,8 @@ You can control whether the GPGMail options fields display at the top of the car
 Checking the 'Keyserver Refresh buttons' will enable in-card refresh buttons per key. See Refreshing Key Information (below) for more information on this.\
 \
 Checking the 'Show card search button' field will allow you to search the Key Server for new keys for a Contact. See the chapter on searching for new keys (below) for more information on this.\
+\
+\
 \
 \
 \
@@ -216,7 +213,8 @@ Clicking this button will contact the Key Server and search for keys matching an
 \pard\tx565\tx1133\tx1700\tx2266\tx2832\tx3401\tx3967\tx4535\tx5102\tx5669\tx6235\tx6802\ql\qnatural
 \cf0  However, you may manually check and uncheck keys to your needs before importing them. Importing keys you already have locally will result in the local key being refreshed.\
 
-\fs34 Uninstalling
+\fs34 \
+Uninstalling
 \fs24 \
 To uninstall the ABKey plugin:\
 	Quit Address Book\
@@ -249,14 +247,14 @@ GPGMail version d38.1 or higher (for per-contact preference support)\
 
 \fs24 The most recent version of this plugin and it's associated source code are available from:\
 \
-http://www.far-blue.co.uk\
+http://abkey.far-blue.co.uk\
 \
 \
 \
 
 \fs34 Important Notes\
 
-\fs24 \'a9 2005 Robert Goldsmith / Far-Blue.\
+\fs24 \'a9 2006 Robert Goldsmith / Far-Blue.\
 I reserve all rights to this software. This software is provided "as is" and with no warranty. I take no responsibility for any damage this software may cause, including but not limited to, through omission or error.\
 \
 For licensing information, please see the included file.\
