@@ -66,7 +66,8 @@ void registerMethodWithNewClass(NSString *originalClass, SEL methodSelector, NSS
   newMethod->method_list[0].method_types=theMethod->method_types;
   newMethod->method_list[0].method_imp=theMethod->method_imp;
   newMethod->method_count=1;
-  class_addMethods(NSClassFromString(newClass),newMethod);
+  //FIXME: crash when running Snow Leopard 10.6.6
+  class_addMethods(NSClassFromString(newClass), newMethod);
 }
 
 void renameMethodForClass(NSString *class, SEL methodSelector, const char *newName)
