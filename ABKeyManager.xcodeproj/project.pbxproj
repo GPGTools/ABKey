@@ -94,28 +94,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 22489ED312E413FA00127ED7 /* MacGPGME.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 554B55C0069F0111005E1C92 /* MacGPGME.framework */;
+			remoteGlobalIDString = 554B55C0069F0111005E1C92;
 			remoteInfo = MacGPGME;
 		};
 		22489EE012E413FA00127ED7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22489ED312E413FA00127ED7 /* MacGPGME.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 554B55EB069F0245005E1C92 /* GPGTester.app */;
+			remoteGlobalIDString = 554B55EB069F0245005E1C92;
 			remoteInfo = GPGTester;
 		};
 		22489EE212E413FA00127ED7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22489ED312E413FA00127ED7 /* MacGPGME.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 551DF42B0B2886420061FE17 /* MacGPGMETesting.octest */;
+			remoteGlobalIDString = 551DF42B0B2886420061FE17;
 			remoteInfo = MacGPGMETesting;
 		};
 		22489EE812E4140D00127ED7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22489ED312E413FA00127ED7 /* MacGPGME.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 554B558F069F0111005E1C92 /* MacGPGME */;
+			remoteGlobalIDString = 554B558F069F0111005E1C92;
 			remoteInfo = MacGPGME;
 		};
 /* End PBXContainerItemProxy section */
@@ -785,8 +785,8 @@
 		4B4CA81A09C3897C00E1BD96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_CW_ASM_SYNTAX = NO;
