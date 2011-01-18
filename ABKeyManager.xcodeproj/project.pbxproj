@@ -10,6 +10,7 @@
 		2233725812E4125200CD171F /* libgpg-error.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2233725712E4125200CD171F /* libgpg-error.a */; };
 		2233725A12E4125E00CD171F /* libgpgme-pthread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2233725912E4125E00CD171F /* libgpgme-pthread.a */; };
 		22489ED012E413E000127ED7 /* MacGPGME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223371FD12E4117F00CD171F /* MacGPGME.framework */; };
+		22FAD64312E5098E00F0C50C /* MacGPGME.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22489EDF12E413FA00127ED7 /* MacGPGME.framework */; };
 		4B00C90A07BD8FF6003A1578 /* ABKeyPreferenceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B00C90807BD8FF6003A1578 /* ABKeyPreferenceModule.h */; };
 		4B00C90B07BD8FF6003A1578 /* ABKeyPreferenceModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B00C90907BD8FF6003A1578 /* ABKeyPreferenceModule.m */; };
 		4B00C97707BD9840003A1578 /* NSPreferencesModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B00C97607BD9840003A1578 /* NSPreferencesModuleProtocol.h */; };
@@ -137,6 +138,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				22FAD64312E5098E00F0C50C /* MacGPGME.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +147,9 @@
 /* Begin PBXFileReference section */
 		0259C576FE90428111CA0C5A /* ABKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ABKeyManager.m; sourceTree = "<group>"; };
 		0259C57AFE90428111CA0C5A /* ABKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ABKeyManager.h; sourceTree = "<group>"; };
-		223371FD12E4117F00CD171F /* MacGPGME.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacGPGME.framework; path = /Data/Temp/ABKey/Dependencies/MacGPGME/build/Debug/MacGPGME.framework; sourceTree = "<absolute>"; };
-		2233725712E4125200CD171F /* libgpg-error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpg-error.a"; path = "/Data/Temp/ABKey/Dependencies/MacGPGME/build/dist/lib/libgpg-error.a"; sourceTree = "<absolute>"; };
-		2233725912E4125E00CD171F /* libgpgme-pthread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpgme-pthread.a"; path = "/Data/Temp/ABKey/Dependencies/MacGPGME/build/dist/lib/libgpgme-pthread.a"; sourceTree = "<absolute>"; };
+		223371FD12E4117F00CD171F /* MacGPGME.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacGPGME.framework; path = Dependencies/MacGPGME/build/Debug/MacGPGME.framework; sourceTree = "<group>"; };
+		2233725712E4125200CD171F /* libgpg-error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpg-error.a"; path = "Dependencies/MacGPGME/build/dist/lib/libgpg-error.a"; sourceTree = "<group>"; };
+		2233725912E4125E00CD171F /* libgpgme-pthread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpgme-pthread.a"; path = "Dependencies/MacGPGME/build/dist/lib/libgpgme-pthread.a"; sourceTree = "<group>"; };
 		22489ED312E413FA00127ED7 /* MacGPGME.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MacGPGME.xcodeproj; path = MacGPGME/MacGPGME.xcodeproj; sourceTree = "<group>"; };
 		4B00C90807BD8FF6003A1578 /* ABKeyPreferenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABKeyPreferenceModule.h; sourceTree = "<group>"; };
 		4B00C90907BD8FF6003A1578 /* ABKeyPreferenceModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABKeyPreferenceModule.m; sourceTree = "<group>"; };
@@ -252,9 +254,6 @@
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
 				4B1F03BB0622F86F00799E84 /* Other */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
-				223371FD12E4117F00CD171F /* MacGPGME.framework */,
-				2233725712E4125200CD171F /* libgpg-error.a */,
-				2233725912E4125E00CD171F /* libgpgme-pthread.a */,
 			);
 			name = ABKeyManager;
 			sourceTree = "<group>";
@@ -311,6 +310,9 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				223371FD12E4117F00CD171F /* MacGPGME.framework */,
+				2233725712E4125200CD171F /* libgpg-error.a */,
+				2233725912E4125E00CD171F /* libgpgme-pthread.a */,
 				4B034A5A060CF1E1004918D6 /* AddressBook.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 			);
